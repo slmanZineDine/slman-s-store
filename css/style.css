@@ -73,6 +73,13 @@ nav .container {
     justify-content: space-between;
     align-items: center;
 }
+@media (max-width: 768px) {
+    nav .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
 nav .logo {
     display: block;
     width: fit-content;
@@ -80,6 +87,12 @@ nav .logo {
     font-size: 35px;
     font-weight: bold;
     position: relative;
+}
+@media (max-width: 768px) {
+    nav .logo {
+        margin-top: 10px;
+        font-size: 25px;
+    }
 }
 nav .logo::before {
     content: "Slman's";
@@ -95,6 +108,12 @@ nav .links {
     justify-content: flex-end;
     width: fit-content;
 }
+@media (max-width: 768px) {
+    nav .links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
 nav .links li a {
     display: block;
     padding: 25px 15px;
@@ -102,6 +121,12 @@ nav .links li a {
     font-weight: bold;
     transition: .4s;
     
+}
+@media (max-width: 768px) {
+    nav .links li a {
+        padding: 15px 10px;
+        font-size: 14px
+    }
 }
 nav .links li a:hover {
     color: var(--main-color);
@@ -125,6 +150,11 @@ nav .links li a:hover {
     left: 50%;
     transform: translate(-50%,-50%);
     max-width: 100%;
+}
+@media (max-width: 768px) {
+    .landing-page p {
+        font-size: 25px;
+    }
 }
 .landing-page span {
     color: var(--main-color)
