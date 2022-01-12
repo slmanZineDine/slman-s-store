@@ -1,0 +1,175 @@
+
+/* Start Variables */
+:root {
+    --main-color: #289dcc;
+    --secondary-color: #232323;
+    --section-background-color-odd: #fff;
+    --section-background-color-even: #f5f6f7;;
+    --section-padding: 50px 0;
+}
+/* End Variables */
+
+/* Start Global Setting */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html { scroll-behavior: smooth; }
+body { font-family: system-ui; }
+h1,h2,h3,h4,h5,h6 { margin: 0; }
+ul { list-style-type: none; }
+a { text-decoration: none; }
+button { cursor: pointer }
+input:focus { outline: none }
+.container { padding: 0 15px; margin: auto; }
+@media (min-width: 768px) {
+    .container { width: 750px; }
+}
+@media (min-width: 992px) {
+.container { width: 970px; }
+}
+@media (min-width: 1200px) {
+.container { width: 1170px; }
+}
+/* End Global Setting */
+
+/* Start My Framework */
+section:nth-child(odd) {
+    background-color: var(--section-background-color-odd);
+}
+section:nth-child(even) {
+    background-color: var(--section-background-color-even);
+}
+/* End My Framework */
+
+/* Start Component */
+.main-head {
+    margin: 0 auto 50px;
+    padding: 10px 20px;
+    width: fit-content;
+    font-weight: bold;
+    letter-spacing: -1px;
+    border: 3px solid var(--secondary-color);
+    border-radius: 10px;
+    background-image: linear-gradient(to bottom , var(--main-color) 50% , #fff 50%);
+    background-size: 100% 200%;
+    background-position: bottom center;
+    transition: .8s;
+}
+.main-head:hover {
+    background-position: top center;
+    color: #fff;
+}
+/* End component */
+
+/* Start Nav */
+nav {
+    background-color: #232323;
+    border-radius: 5px;
+}
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav .logo {
+    display: block;
+    width: fit-content;
+    color: #289dcc;
+    font-size: 35px;
+    font-weight: bold;
+    position: relative;
+}
+nav .logo::before {
+    content: "Slman's";
+    position: absolute;
+    top: 0;
+    color: #fff;
+    overflow: hidden;
+    width: 0;
+    animation: fill-logo 5s linear infinite;
+}
+nav .links {
+    display: flex;
+    justify-content: flex-end;
+    width: fit-content;
+}
+nav .links li a {
+    display: block;
+    padding: 25px 15px;
+    color: #fff;
+    font-weight: bold;
+    transition: .4s;
+    
+}
+nav .links li a:hover {
+    color: var(--main-color);
+    background-color: #fafafa;
+}
+/* End Nav */
+
+/* Start Landing Page */
+.landing-page {
+    background-image: url(../imgs/landing-page.jpg);
+    background-size: cover;
+    height: calc(100vh - 50px);
+    position: relative;
+}
+.landing-page p {
+    color: rgb(227 197 197);
+    font-size: 40px;
+    font-family:cursive;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    max-width: 100%;
+}
+.landing-page span {
+    color: var(--main-color)
+}
+/* End Landing Page */
+
+/* Start Sections */
+.sections {
+    padding: var(--section-padding)
+}
+.sections .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    gap: 25px;
+}
+.sections .box {
+    padding: 10px;
+    background-color: #333333de;
+    position: relative;
+    top: 0;
+    transition: .8s;
+}
+.sections .box:hover {
+    top: -15px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.sections .box img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+.sections .box h3 {
+    color: #fff;
+    text-align: center;
+    margin: 10px 0;
+    transition: .4s;
+}
+.sections .box:hover h3 {
+    color: var(--main-color)
+}
+/* End Sections */
+
+/* Start Animation */
+@keyframes fill-logo {
+    100% {
+        width: 100%;
+    }
+}
+/* End Animation */
