@@ -197,20 +197,17 @@ nav .links li a:hover {
     background-color: #1b1b32;
     color: #fff;
 }
-.sections .practice .main-ul > li > a:only-child::after {
-    content: "";
+.sections .practice .main-ul > li > a:only-child i {
+    display: none;
 }
-.sections .practice .main-ul > li > a::after {
-    content: "\f078";
-    font-family: 'Font Awesome 5 free';
-    font-weight: 900;
+.sections .practice .main-ul > li > a i {
     position: absolute;
     right: 20px;
 }
 .sections .practice .main-ul > li .sub-ul {
     margin-top: 10px;
     margin-left: 30px;
-    /* display: none; */
+    display: none;
 }
 .sections .practice .main-ul > li .sub-ul li {
     margin-bottom: 8px;

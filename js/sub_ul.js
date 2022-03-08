@@ -1,8 +1,16 @@
-// let theUl = document.getElementsByClassName("sub-ul"),
-//     theButton = document.querySelectorAll(".sections .practice .main-ul > li > a");
 
+let theBtns = document.querySelectorAll(".sections .practice .main-ul > li > a"),
+    theIcon = document.querySelectorAll(".sections .practice .main-ul > li > a i");
+    // console.log(theIcon);
+function showList (e) {
+    e.preventDefault();
+    let nextEle = this.nextElementSibling;
+    console.log(this.firstElementChild.classList.toggle("fa-angle-up"));
+    if(this.classList.toggle("clicked"))
+        nextEle.style.display = "block";
+    else
+    nextEle.style.display = "none";
+}
 
-// theButton[0].addEventListener("click", function(event) {
-//     event.preventDefault ();
-//     theUl[0].setAttribute("class","sub-ul active");
-// })
+for(let i = 0 ; i < theBtns.length ; i++)
+    theBtns[i].addEventListener("click", showList);
