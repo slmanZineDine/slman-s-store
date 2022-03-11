@@ -1,7 +1,6 @@
+// Create collapse list
+let theBtns = document.querySelectorAll(".sections .practice .main-ul > li > a");
 
-let theBtns = document.querySelectorAll(".sections .practice .main-ul > li > a"),
-    theIcon = document.querySelectorAll(".sections .practice .main-ul > li > a i");
-    // console.log(theIcon);
 function showList (e) {
     e.preventDefault();
     let nextEle = this.nextElementSibling;
@@ -14,3 +13,7 @@ function showList (e) {
 
 for(let i = 0 ; i < theBtns.length ; i++)
     theBtns[i].addEventListener("click", showList);
+
+// Last Up Date
+let lastModifier = document.querySelector("footer .last-up-date");
+lastModifier.textContent = document.lastModified;

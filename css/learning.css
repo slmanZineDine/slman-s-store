@@ -214,6 +214,16 @@ nav .links li a:hover {
     position: relative;
     counter-increment: sub-ul-items;
 }
+.sections .practice .main-ul > li .sub-ul li i {
+    position: absolute;
+    right: 25px;
+    bottom: 10px;
+    z-index: 4;
+    cursor: pointer;
+}
+.sections .practice .main-ul > li .sub-ul li:hover i {
+    color: #fff;
+}
 .sections .practice .main-ul > li .sub-ul li::before {
     content: counter(sub-ul-items);
     position: absolute;
@@ -230,7 +240,7 @@ nav .links li a:hover {
     align-items: center;
     justify-content: center;
 }
-.sections .practice .main-ul > li .sub-ul li a {
+.sections .practice .main-ul > li .sub-ul li a:first-child {
     display: block;
     background-color: #d0d0d5;
     color: #333;
@@ -238,14 +248,23 @@ nav .links li a:hover {
     margin-left: 20px;
     transition: .4s;
 }
-.sections .practice .main-ul > li .sub-ul li a:hover {
+.sections .practice .main-ul > li .sub-ul li:hover a:first-child {
     background-color: #1b1b32;
     color: #fff;
 }
-/* .active {
-    display: block !important;
-} */
 /* End Sections */
+
+/* Start Footer */
+footer {
+    background-color: var(--secondary-color);
+    padding: 20px;
+}
+footer .last-up-date {
+    color: var(--main-color);
+    text-align: center;
+    font-weight: bold;
+}
+/* End Footer */
 
 /* Start Animation */
 @keyframes fill-logo {

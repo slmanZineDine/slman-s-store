@@ -196,6 +196,18 @@ nav .links li a:hover {
 }
 /* End Sections */
 
+/* Start Footer */
+footer {
+    background-color: var(--secondary-color);
+    padding: 20px;
+}
+footer .last-up-date {
+    color: var(--main-color);
+    text-align: center;
+    font-weight: bold;
+}
+/* End Footer */
+
 /* Start Animation */
 @keyframes fill-logo {
     100% {
